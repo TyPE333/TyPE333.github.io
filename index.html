@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohan Avireddy - Applied ML Engineer Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+        }
+        /* Custom scrollbar for better aesthetics */
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+        body::-webkit-scrollbar-track {
+            background: #1a202c; /* Dark background for track */
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #4a5568; /* Greyish thumb */
+            border-radius: 10px;
+            border: 2px solid #1a202c;
+        }
+        body::-webkit-scrollbar-thumb:hover {
+            background-color: #6b7280; /* Lighter grey on hover */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-800 p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-teal-400 hover:text-teal-300 transition duration-300 ease-in-out">Rohan Avireddy</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-300 hover:text-teal-400 transition duration-300 ease-in-out">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-teal-400 transition duration-300 ease-in-out">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-teal-400 transition duration-300 ease-in-out">Projects</a>
+                <a href="#experience" class="text-gray-300 hover:text-teal-400 transition duration-300 ease-in-out">Experience & Education</a>
+                <a href="#contact" class="text-gray-300 hover:text-teal-400 transition duration-300 ease-in-out">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-teal-400 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-800 pt-2 pb-4 space-y-2 text-center">
+            <a href="#about" class="block text-gray-300 hover:text-teal-400 transition duration-300 ease-in-out py-2">About</a>
+            <a href="#skills" class="block text-gray-300 hover:text-teal-400 transition duration-300 ease-in-out py-2">Skills</a>
+            <a href="#projects" class="block text-gray-300 hover:text-teal-400 transition duration-300 ease-in-out py-2">Projects</a>
+            <a href="#experience" class="block text-gray-300 hover:text-teal-400 transition duration-300 ease-in-out py-2">Experience & Education</a>
+            <a href="#contact" class="block text-gray-300 hover:text-teal-400 transition duration-300 ease-in-out py-2">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center text-center bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden p-4">
+        <!-- Background particles/shapes (optional, can be added with JS or SVG) -->
+        <div class="absolute inset-0 z-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.3"/>
+                        <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0"/>
+                    </radialGradient>
+                </defs>
+                <circle cx="20" cy="20" r="15" fill="url(#grad1)"/>
+                <circle cx="80" cy="70" r="20" fill="url(#grad1)"/>
+                <circle cx="50" cy="50" r="10" fill="url(#grad1)"/>
+                <circle cx="10" cy="90" r="12" fill="url(#grad1)"/>
+            </svg>
+        </div>
+        <div class="z-10 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4 animate-fade-in-up">
+                Rohan Avireddy
+            </h1>
+            <p class="text-2xl md:text-3xl font-light text-teal-400 mb-8 animate-fade-in-up delay-200">
+                Applied ML Engineer | Generative AI | LLM Systems | MLOps
+            </p>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 animate-fade-in-up delay-400">
+                Building intelligent systems that learn, adapt, and scale.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in-up delay-600">
+                <a href="#projects" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                    View Projects
+                </a>
+                <a href="https://www.linkedin.com/in/rohanavireddy/" target="_blank" rel="noopener noreferrer" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                    Connect on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 bg-gray-800">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl font-bold text-center text-teal-400 mb-12">About Me</h2>
+            <div class="bg-gray-700 p-8 rounded-xl shadow-lg text-lg leading-relaxed">
+                <p class="mb-4">
+                    I'm a Master's graduate in Computer Science with a passion for building scalable and robust machine learning systems, specializing in Generative AI and MLOps. My academic background from the University of Washington and Vellore Institute of Technology, combined with practical experience at Amazon and Samsung, has equipped me with a strong foundation in deep learning, natural language processing, and system optimization.
+                </p>
+                <p>
+                    I thrive on tackling complex challenges, from developing prompt-pipeline microservices that scale to 100K requests/day to fine-tuning LLMs for specific applications and engineering end-to-end model monitoring systems. My goal is to leverage cutting-edge AI technologies to create impactful solutions that drive efficiency and innovation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 px-4 bg-gray-900">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-4xl font-bold text-center text-teal-400 mb-12">Skills</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <!-- Each skill tag -->
+                <span class="bg-blue-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md transition duration-300 ease-in-out hover:bg-blue-700 transform hover:scale-105">Python</span>
+                <span class="bg-blue-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md transition duration-300 ease-in-out hover:bg-blue-700 transform hover:scale-105">PyTorch</span>
+                <span class="bg-blue-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md transition duration-300 ease-in-out hover:bg-blue-700 transform hover:scale-105">TensorFlow</span>
+                <span class="bg-blue-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md transition duration-300 ease-in-out hover:bg-blue-700 transform hover:scale-105">Hugging Face Transformers</span>
+                <span class="bg-blue-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md transition duration-300 ease-in-out hover:bg-blue-700 transform hover:scale-105">LangChain</span>
+                <span class="bg-blue-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md transition duration-300 ease-in-out hover:bg-blue-700 transform hover:scale-105">FastAPI</span>
+                <span class="bg-blue-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md transition duration-300 ease-in-out hover:bg-blue-700 transform hover:scale-105">Docker</span>
+                <span class="bg-blue-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md transition duration-300 ease-in-out hover:bg-blue-700 transform hover:scale-105">Git</span>
+                <span class="bg-blue-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md transition duration-300 ease-in-out hover:bg-blue-700 transform hover:scale-105">SQL</span>
+                <span class="bg-blue-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md transition duration-300 ease-in-out hover:bg-blue-700 transform hover:scale-105">AWS (SageMaker, Bedrock)</span>
+                <span class="bg-blue-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md transition duration-300 ease-in-out hover:bg-blue-700 transform hover:scale-105">Streamlit</span>
+                <span class="bg-blue-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md transition duration-300 ease-in-out hover:bg-blue-700 transform hover:scale-105">Prefect</span>
+                <span class="bg-blue-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md transition duration-300 ease-in-out hover:bg-blue-700 transform hover:scale-105">MLflow</span>
+                <span class="bg-blue-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md transition duration-300 ease-in-out hover:bg-blue-700 transform hover:scale-105">Evidently AI</span>
+                <span class="bg-blue-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md transition duration-300 ease-in-out hover:bg-blue-700 transform hover:scale-105">Generative AI</span>
+                <span class="bg-blue-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md transition duration-300 ease-in-out hover:bg-blue-700 transform hover:scale-105">Prompt Engineering</span>
+                <span class="bg-blue-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md transition duration-300 ease-in-out hover:bg-blue-700 transform hover:scale-105">MLOps</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-4 bg-gray-800">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl font-bold text-center text-teal-400 mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project Card 1: RAG-Bench -->
+                <div class="bg-gray-700 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="https://placehold.co/600x400/334155/ffffff?text=RAG-Bench" alt="RAG-Bench Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-white mb-3">RAG-Bench: Retrieval Evaluation Framework</h3>
+                        <p class="text-gray-300 mb-4">
+                            Built a framework with BGE reranking, hybrid retrieval, and Streamlit dashboard for RAG evaluation (Precision@K, NDCG).
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-600 text-gray-200 text-sm px-3 py-1 rounded-full">Hugging Face</span>
+                            <span class="bg-gray-600 text-gray-200 text-sm px-3 py-1 rounded-full">LangChain</span>
+                            <span class="bg-gray-600 text-gray-200 text-sm px-3 py-1 rounded-full">Streamlit</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="text-teal-400 hover:text-teal-300 font-medium transition duration-300 ease-in-out">
+                                View Details &rarr;
+                            </a>
+                            <a href="https://github.com/your-github-link/rag-bench" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: ML Monitoring System -->
+                <div class="bg-gray-700 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="https://placehold.co/600x400/334155/ffffff?text=ML+Monitoring" alt="ML Monitoring System Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-white mb-3">ML Monitoring System</h3>
+                        <p class="text-gray-300 mb-4">
+                            Engineered a FastAPI service with Evidently AI, Prometheus, and full test coverage to monitor data distribution and prediction drift.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-600 text-gray-200 text-sm px-3 py-1 rounded-full">FastAPI</span>
+                            <span class="bg-gray-600 text-gray-200 text-sm px-3 py-1 rounded-full">Evidently AI</span>
+                            <span class="bg-gray-600 text-gray-200 text-sm px-3 py-1 rounded-full">Prometheus</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="text-teal-400 hover:text-teal-300 font-medium transition duration-300 ease-in-out">
+                                View Details &rarr;
+                            </a>
+                            <a href="https://github.com/your-github-link/ml-monitoring-system" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: RAG-Autotune -->
+                <div class="bg-gray-700 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="https://placehold.co/600x400/334155/ffffff?text=RAG-Autotune" alt="RAG-Autotune Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-white mb-3">RAG-Autotune: Self-Tuning LoRA-Based RAG</h3>
+                        <p class="text-gray-300 mb-4">
+                            Developed a LangGraph-based RAG retriever with LoRA fine-tuning, ANN search, and live feedback integration.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-600 text-gray-200 text-sm px-3 py-1 rounded-full">LangGraph</span>
+                            <span class="bg-gray-600 text-gray-200 text-sm px-3 py-1 rounded-full">LoRA</span>
+                            <span class="bg-gray-600 text-gray-200 text-sm px-3 py-1 rounded-full">Odrant</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="text-teal-400 hover:text-teal-300 font-medium transition duration-300 ease-in-out">
+                                View Details &rarr;
+                            </a>
+                            <a href="https://github.com/your-github-link/rag-autotune" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4: Distributed ASR Model Training -->
+                <div class="bg-gray-700 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="https://placehold.co/600x400/334155/ffffff?text=ASR+Training" alt="ASR Training Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-white mb-3">Distributed ASR Model Training</h3>
+                        <p class="text-gray-300 mb-4">
+                            Evaluated cost-performance tradeoffs in distributed ASR model training configurations on AWS SageMaker, reducing cost by 35%.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-600 text-gray-200 text-sm px-3 py-1 rounded-full">AWS SageMaker</span>
+                            <span class="bg-gray-600 text-gray-200 text-sm px-3 py-1 rounded-full">Wav2Vec2</span>
+                            <span class="bg-gray-600 text-gray-200 text-sm px-3 py-1 rounded-full">Distributed Training</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="text-teal-400 hover:text-teal-300 font-medium transition duration-300 ease-in-out">
+                                View Details &rarr;
+                            </a>
+                            <a href="https://github.com/your-github-link/asr-model-training" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="py-16 px-4 bg-gray-900">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl font-bold text-center text-teal-400 mb-12">Experience & Education</h2>
+
+            <!-- Work Experience -->
+            <div class="mb-12">
+                <h3 class="text-3xl font-semibold text-white mb-8 text-center md:text-left">Work Experience</h3>
+
+                <!-- Amazon -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-6">
+                    <h4 class="text-2xl font-bold text-teal-300">Applied Scientist 1 Intern</h4>
+                    <p class="text-gray-300 text-lg">Amazon, Seattle, WA | Jun 2024 - Sep 2024</p>
+                    <ul class="list-disc list-inside text-gray-400 mt-4 space-y-2">
+                        <li>Built a Dockerized prompt-pipeline microservice (AWS Bedrock + LangChain) for entity matching, scaling to 100K product-pair requests/day with &lt;200ms latency.</li>
+                        <li>Improved annotation precision from 82% to 92% by experimenting with advanced prompt strategies (Chain-of-Thought, ReAct, Self-Consistency, Contrastive CoT).</li>
+                        <li>Automated quality control with pytest + Prometheus, reducing manual review by 38% and annotation costs by 30%.</li>
+                    </ul>
+                </div>
+
+                <!-- University of Washington -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-6">
+                    <h4 class="text-2xl font-bold text-teal-300">Graduate Research Assistant</h4>
+                    <p class="text-gray-300 text-lg">University of Washington, Tacoma, WA | Apr 2024 - Jun 2024</p>
+                    <ul class="list-disc list-inside text-gray-400 mt-4 space-y-2">
+                        <li>Fine-tuned a single-cell GPT model on bulk RNA-seq using transfer learning with latent-space Mixup, increasing effective sample diversity by 30%.</li>
+                        <li>Synthesized expression profiles conditioned on cell type and treatment labels, reducing class imbalance error by 25%.</li>
+                        <li>Boosted survival model performance (C-index: 0.62&rarr;0.75) by augmenting Cox proportional hazards models with synthetic training data.</li>
+                    </ul>
+                </div>
+
+                <!-- Samsung -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-teal-300">NLP Research Intern</h4>
+                    <p class="text-gray-300 text-lg">Samsung, Karnataka, India | Jan 2022 - Jun 2022</p>
+                    <ul class="list-disc list-inside text-gray-400 mt-4 space-y-2">
+                        <li>Developed a multilingual NLP module for Bixby Assistant, enabling accurate word-level language identification in Hindi-English code-switched text.</li>
+                        <li>Achieved 95% accuracy and 91% Macro-F1 on 100K+ sentences using BERT, BILSTM, and SVM architectures.</li>
+                        <li>Led TensorFlow pipeline optimization, improving performance by 12% and reducing training time by 20% through hyperparameter tuning.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div>
+                <h3 class="text-3xl font-semibold text-white mb-8 text-center md:text-left">Education</h3>
+
+                <!-- University of Washington -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-6">
+                    <h4 class="text-2xl font-bold text-teal-300">M.Sc Computer Science and Systems</h4>
+                    <p class="text-gray-300 text-lg">University of Washington, Tacoma, WA | Mar 2025</p>
+                    <p class="text-gray-400 mt-2">CGPA: 4.0/4.0</p>
+                </div>
+
+                <!-- Vellore Institute of Technology -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-teal-300">B.Tech Computer Science and Engineering</h4>
+                    <p class="text-gray-300 text-lg">Vellore Institute of Technology, TN, India | Aug 2023</p>
+                    <p class="text-gray-400 mt-2">CGPA: 3.8/4.0</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 bg-gray-800">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h2 class="text-4xl font-bold text-teal-400 mb-12">Get In Touch</h2>
+            <p class="text-lg text-gray-300 mb-8">
+                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            </p>
+            <div class="flex flex-col items-center space-y-6">
+                <a href="mailto:rohanavireddy2019@gmail.com" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 flex items-center">
+                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 4v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7"></path></svg>
+                    rohanavireddy2019@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/rohanavireddy/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-teal-400 transition duration-300 ease-in-out flex items-center">
+                    <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-teal-400 transition duration-300 ease-in-out flex items-center">
+                    <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.08-.731.084-.716.084-.716 1.192.085 1.815 1.226 1.815 1.226 1.064 1.816 2.809 1.299 3.493.993.108-.775.418-1.299.762-1.599-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.118-3.176 0 0 1.007-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.003.404 2.294-1.552 3.301-1.23 3.301-1.23.653 1.653.242 2.874.118 3.176.769.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576c4.765-1.589 8.197-6.086 8.197-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm">
+        <div class="container mx-auto">
+            <p>&copy; <span id="current-year"></span> Rohan Avireddy. All rights reserved.</p>
+            <p class="mt-2">Built with ❤️ and Tailwind CSS</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Current Year -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
