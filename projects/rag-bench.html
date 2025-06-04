@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG-Bench: Retrieval Evaluation Framework - Rohan Avireddy</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+        body::-webkit-scrollbar-track {
+            background: #1a202c;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #4a5568;
+            border-radius: 10px;
+            border: 2px solid #1a202c;
+        }
+        body::-webkit-scrollbar-thumb:hover {
+            background-color: #6b7280;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <!-- Navigation Bar (Optional, you can simplify or remove for project pages) -->
+    <nav class="bg-gray-800 p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-teal-400 hover:text-teal-300 transition duration-300 ease-in-out">&larr; Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <!-- Project Detail Section -->
+    <section class="py-16 px-4 bg-gray-800">
+        <div class="container mx-auto max-w-5xl">
+            <h1 class="text-5xl font-extrabold text-center text-teal-400 mb-8">RAG-Bench: Retrieval Evaluation Framework</h1>
+            <p class="text-lg text-gray-300 text-center mb-12">
+                A robust framework for evaluating Retrieval-Augmented Generation (RAG) systems.
+            </p>
+
+            <div class="bg-gray-700 p-8 rounded-xl shadow-lg mb-12">
+                <img src="https://placehold.co/800x450/334155/ffffff?text=RAG-Bench+Overview" alt="RAG-Bench Overview" class="w-full rounded-lg mb-6">
+                <h2 class="text-3xl font-semibold text-white mb-4">Problem Statement</h2>
+                <p class="text-gray-300 mb-6">
+                    Evaluating the effectiveness of RAG systems, especially with various retrieval strategies (sparse, dense, reranked), can be complex and lacks a standardized, modular approach. It's challenging to compare different retrieval pipelines and understand their impact on the final generation quality.
+                </p>
+
+                <h2 class="text-3xl font-semibold text-white mb-4">Solution Overview</h2>
+                <p class="text-gray-300 mb-6">
+                    I developed a comprehensive RAG evaluation framework, RAG-Bench, designed for modularity and ease of comparison. It integrates various retrieval methods and provides a Streamlit dashboard for interactive analysis of key metrics.
+                </p>
+
+                <h2 class="text-3xl font-semibold text-white mb-4">Key Features & Technologies</h2>
+                <ul class="list-disc list-inside text-gray-300 space-y-2 mb-6">
+                    <li>**BGE Reranking:** Implemented advanced reranking techniques to improve retrieval precision.</li>
+                    <li>**Hybrid Retrieval:** Supported combining sparse (e.g., BM25) and dense (e.g., embeddings) retrieval methods.</li>
+                    <li>**Streamlit Dashboard:** Created an interactive web application for visualizing evaluation results, including Precision@K and NDCG.</li>
+                    <li>**Modular Evaluation:** Enabled seamless switching and comparison across different retrieval pipelines (Hugging Face, LangChain).</li>
+                    <li>**Technologies Used:** Hugging Face, LangChain, Streamlit, Python, scikit-learn.</li>
+                </ul>
+
+                <h2 class="text-3xl font-semibold text-white mb-4">Architecture (Conceptual)</h2>
+                <p class="text-gray-300 mb-6">
+                    The framework is structured to allow interchangeable components for retrieval, reranking, and evaluation metrics. Data flows from a dataset, through a chosen retrieval pipeline, and then into the evaluation module which feeds results to the Streamlit dashboard.
+                </p>
+                <img src="https://placehold.co/800x450/334155/ffffff?text=Architecture+Diagram" alt="Architecture Diagram Placeholder" class="w-full rounded-lg mb-6">
+
+                <h2 class="text-3xl font-semibold text-white mb-4">Results & Impact</h2>
+                <p class="text-gray-300 mb-6">
+                    RAG-Bench significantly streamlined the process of evaluating RAG systems, allowing for quick iteration and comparison of different strategies. It provided clear insights into the performance tradeoffs of various retrieval pipelines, facilitating informed decision-making for RAG system optimization.
+                </p>
+
+                <h2 class="text-3xl font-semibold text-white mb-4">Learnings & Challenges</h2>
+                <p class="text-gray-300 mb-6">
+                    A key learning was the importance of a flexible architecture for RAG evaluation, as the field is rapidly evolving. Challenges included integrating diverse libraries (Hugging Face, LangChain) while maintaining a consistent evaluation interface.
+                </p>
+
+                <div class="flex justify-center space-x-4">
+                    <a href="https://github.com/your-github-link/rag-bench" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                        View on GitHub
+                    </a>
+                    <a href="../index.html" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                        Back to Portfolio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm">
+        <div class="container mx-auto">
+            <p>&copy; <span id="current-year"></span> Rohan Avireddy. All rights reserved.</p>
+            <p class="mt-2">Built with ❤️ and Tailwind CSS</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
